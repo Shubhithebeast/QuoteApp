@@ -25,7 +25,7 @@ Configure your connection string in the .env file.
 npm start
 </pre>
 
-<p>Visit <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> to experience QuoteApp!</p>
+<p>Visit <a href="http://localhost:3001" target="_blank">http://localhost:3001</a> to experience QuoteApp!</p>
 
 <b>How to Contribute</b><br>
 <p>If you have inspiring ideas to improve QuoteApp, contribute by forking the repository, making changes, and submitting a pull request.</p>
@@ -36,3 +36,4 @@ npm start
 
 <p>Embrace the wisdom with QuoteApp! 📚✨ Share your favorite quotes and spread positivity!</p>
 </html>
+

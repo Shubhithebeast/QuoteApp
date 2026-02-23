@@ -21,7 +21,7 @@ const App = () => {
       // const {a:author, q:text} = response.data[0];
 
       // posting data , what we have displayed
-      // await axios.post('http://localhost:5000/api/addQuote',{author,text});
+      // await axios.post('http://localhost:5001/api/addQuote',{author,text});
 
       // setQuote({author,text});
       setQuote(response.data[0]);
@@ -106,3 +106,4 @@ const App = () => {
 };
 
 export default App;
+
