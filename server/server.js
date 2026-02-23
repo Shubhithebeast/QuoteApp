@@ -16,10 +16,19 @@ connectDb();
 app.use('/api',require('./routes/quotes'));
 
 app.get("/", (req, res) => {
-    res.send("Hiii, its working...");
-})
+    res.json({ success: true, message: "Quote API is running." });
+});
+
+app.get('/health', (req, res) => {
+    res.json({ success: true, status: 'ok' });
+});
+
+app.use((req, res) => {
+    res.status(404).json({ success: false, message: 'Route not found.' });
+});
+
 // start server at PORT
 app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT}`);
-})
+});
 

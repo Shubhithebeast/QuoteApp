@@ -1,39 +1,55 @@
-<h2><b><a href="https://quotesapp-byshubham.netlify.app/" target="_blank" >QuoteApp</a></b></h2>
-<hr>
-<p>Explore the world of wisdom with QuoteApp - a MERN stack project where you can share and discover inspiring quotes. Get ready for a journey of enlightenment!</p>
+# QuoteApp
 
-<b>Getting Started</b><br>
-<p>Clone the Repository:</p>
-<pre>
-git clone https://github.com/Shubhithebeast/QuoteApp.git
-</pre>
+QuoteApp is a MERN project for browsing and searching motivational quotes.
 
-<p>Install Dependencies:</p>
-<pre>
-cd QuoteApp
-npm install
-</pre>
+## Local Setup
 
-<p>Set Up MongoDB:</p>
-<pre>
-Create a MongoDB Atlas account (if not already).
-Configure your connection string in the .env file.
-</pre>
+1. Install dependencies
 
-<p>Run the App:</p>
-<pre>
+```bash
+cd server && npm install
+cd ../client && npm install
+```
+
+2. Configure backend env in `server/.env`
+
+```env
+MONGO_URI=your_mongodb_connection_string
+PORT=5001
+```
+
+3. Configure frontend env in `client/.env`
+
+```env
+PORT=3001
+REACT_APP_API_URL=http://localhost:5001
+```
+
+4. Start backend
+
+```bash
+cd server
+npm run start
+```
+
+5. Start frontend
+
+```bash
+cd client
 npm start
-</pre>
+```
 
-<p>Visit <a href="http://localhost:3001" target="_blank">http://localhost:3001</a> to experience QuoteApp!</p>
+App runs at `http://localhost:3001`.
 
-<b>How to Contribute</b><br>
-<p>If you have inspiring ideas to improve QuoteApp, contribute by forking the repository, making changes, and submitting a pull request.</p>
+## Available Backend Scripts
 
-<b>Screenshots</b><br>
-![Screenshot (486)](https://github.com/Shubhithebeast/QuoteApp/assets/71927968/54d20345-2bfd-4740-a7d3-177d3ca346ba)
+- `npm run start` - start API
+- `npm run dev` - start API with nodemon
+- `npm run import` - import quotes from `server/quotes.json` into MongoDB
 
+## API Endpoints
 
-<p>Embrace the wisdom with QuoteApp! 📚✨ Share your favorite quotes and spread positivity!</p>
-</html>
-
+- `GET /health` - health check
+- `GET /api/random` - random quote
+- `GET /api/search/:author` - random quote by matching author
+- `GET /api/stats` - total quotes and authors
